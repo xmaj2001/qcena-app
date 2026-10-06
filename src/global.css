@@ -1,9 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
-  --font-display:
-    Spline Sans, Inter, ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji,
-    Segoe UI Symbol, Noto Color Emoji;
-  --font-mono:
-    ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
-  --font-rounded: 'SF Pro Rounded', 'Hiragino Maru Gothic ProN', Meiryo, 'MS PGothic', sans-serif;
-  --font-serif: Georgia, 'Times New Roman', serif;
+  --background: #fbf5e9;
+  --foreground: #1c1917;
+  --card: #ffffff;
+  --card-foreground: #1c1917;
+  --popover: #ffffff;
+  --popover-foreground: #1c1917;
+  --primary: #f97015;
+  --primary-foreground: #fbf8f2;
+  --primary-glow: #f0a21f;
+  --secondary: #eeeae6;
+  --secondary-foreground: #2a2622;
+  --muted: #f2efec;
+  --muted-foreground: #78706a;
+  --accent: #e5493a;
+  --accent-foreground: #fbf8f2;
+  --cream: #f8f3e4;
+  --ink: #151a2a;
+  --destructive: #e5483f;
+  --destructive-foreground: #fbf8f2;
+  --border: #d9d5d1;
+  --input: #d9d5d1;
+  --ring: #f0652a;
+}
+
+.dark:root {
+  --background: #1a1613;
+  --foreground: #f8f3e4;
+  --card: #26211d;
+  --card-foreground: #f5f1ea;
+  --popover: #26211d;
+  --popover-foreground: #f5f1ea;
+  --primary: #f26b3a;
+  --primary-foreground: #3a0d00;
+  --primary-glow: #ffbe55;
+  --secondary: #38322d;
+  --secondary-foreground: #f5f1ea;
+  --muted: #332e2a;
+  --muted-foreground: #b3aaa3;
+  --accent: #e5493a;
+  --accent-foreground: #fbf8f2;
+  --cream: #f8f3e4;
+  --ink: #151a2a;
+  --destructive: #e5483f;
+  --destructive-foreground: #fbf8f2;
+  --border: #463f3a;
+  --input: #463f3a;
+  --ring: #f26b3a;
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+  }
+
+  ::selection {
+    background: color-mix(in oklab, var(--primary) 45%, transparent);
+  }
 }

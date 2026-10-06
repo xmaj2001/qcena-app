@@ -1,8 +1,11 @@
 {
   "expo": {
     "name": "qcena-app",
-    "slug": "qcena-app",
+    "slug": "qcena",
     "version": "1.0.0",
+    "runtimeVersion": {
+      "policy": "fingerprint"
+    },
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
     "scheme": "qcenaapp",
@@ -12,12 +15,13 @@
     },
     "android": {
       "adaptiveIcon": {
-        "backgroundColor": "#E6F4FE",
+        "backgroundColor": "#FBF5E9",
         "foregroundImage": "./assets/images/android-icon-foreground.png",
         "backgroundImage": "./assets/images/android-icon-background.png",
         "monochromeImage": "./assets/images/android-icon-monochrome.png"
       },
-      "predictiveBackGestureEnabled": false
+      "predictiveBackGestureEnabled": false,
+      "package": "com.xmaj.qcena"
     },
     "web": {
       "output": "static",
@@ -28,15 +32,26 @@
       [
         "expo-splash-screen",
         {
-          "backgroundColor": "#208AEF",
+          "backgroundColor": "#FBF5E9",
           "image": "./assets/images/splash-icon.png",
           "imageWidth": 76
         }
-      ]
+      ],
+      "expo-image"
     ],
     "experiments": {
       "typedRoutes": true,
       "reactCompiler": true
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "1e1d8da5-b101-4d54-b0da-9ae59980e10a"
+      }
+    },
+    "owner": "xmaj",
+    "updates": {
+      "url": "https://u.expo.dev/1e1d8da5-b101-4d54-b0da-9ae59980e10a"
     }
   }
 }
